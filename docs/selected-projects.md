@@ -1,6 +1,6 @@
 # Vexon IT — work you can inspect
 
-**RJ Garza Jr · Edinburg and the Rio Grande Valley, Texas**
+**Vexon IT Services · Edinburg and the Rio Grande Valley, Texas**
 
 Vexon helps with everyday technology problems and explains the work clearly. Start with one device connection or one priority issue. The independent projects below show how Vexon approaches explanation, troubleshooting and practical handoff notes. Media and learning examples support our own promotion and development; they are not content-production services for sale.
 
@@ -44,14 +44,18 @@ Vexon helps with everyday technology problems and explains the work clearly. Sta
 
 These are independent projects. They are not client case studies or claims of certifications, manufacturer approval, customer revenue or guaranteed results. [Detailed dated project evidence](project-evidence.md) is available for a closer review.
 
-## Start with a small, defined job
+## Choose residential or business help
+
+See the [current service scope and booking limits](service-scope.md). Residential prices are not business prices. Work for a business, employer, organization or business account needs a separate business review, even from a home office. The [field app](../index.html) is an internal demo, not an alternative rate card or booking system.
 
 | Offer | Price and scope |
 |---|---|
-| **Remote tech help** | **$25** for up to **20 minutes**, one issue on one device. Examples include Wi-Fi, device or office-printer connection help. |
-| **On-site tech visit** | **$65** for up to **45 minutes**, one priority issue. Travel within **10 road miles of downtown Edinburg** is included. |
+| **Residential remote PC support** | **$89**, one PC, one main issue, up to **60 minutes**. Fit, consent, tool/license check, availability and written total are required before booking. |
+| **Other residential help** | Existing Wi-Fi, printer/device help and home visits: **by quote**. No recurring residential plan is offered. |
+| **Business projects** | **Separate quote** after fit and scope review; not included in the residential session. |
+| **Managed business pilot / co-managed help** | **Being prepared**, by quote after readiness/capacity checks. No approved recurring business rate or active coverage is established here. |
 
-Tech-help prices cover the agreed time and assessment; a completed repair is not guaranteed. Scope, availability and the total are confirmed before booking. Materials, applicable tax, farther travel and extra work are quoted for approval.
+The residential session covers agreed time and assessment, not a guaranteed repair. Confirm scope, exclusions, payment and cancellation/refund terms, applicable tax, travel, materials and total before booking. Extra work requires prior approval. A free 20-minute planning call is a needs discussion, not troubleshooting, technical assessment or permission to access systems. A request alone does not reserve time or authorize a charge. Existing agreements and customer rights are not changed by this page. See the full scope for business readiness and existing-agreement limits.
 
 ## From the first message to handoff
 

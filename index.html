@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Vexon IT">
-<title>Vexon IT Field App</title>
+<title>Vexon IT Field App · Internal Prototype</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -86,6 +86,17 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
+
+  .prototype-notice {
+    flex-shrink: 0;
+    padding: 10px 16px;
+    background: var(--surf);
+    border-bottom: 1px solid var(--border2);
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+  .prototype-notice strong { color: var(--gold); }
+  .prototype-notice a { color: var(--blue3); text-decoration: underline; }
 
   /* ── NAV ── */
   .bottom-nav {
@@ -484,11 +495,16 @@
     <div class="logo-mark">VX</div>
     <div>
       <div class="logo-text">VEXON IT</div>
-      <div class="logo-sub">Field Operations</div>
+      <div class="logo-sub">Internal Field Reference</div>
     </div>
   </div>
-  <div class="header-badge">RGV · Active</div>
+  <div class="header-badge">Prototype</div>
 </header>
+
+<aside class="prototype-notice" aria-label="Prototype pricing notice">
+  <strong>Internal demo only.</strong> Use fictional records. Residential and business work have separate scopes.
+  <a id="public-offers-link" href="https://github.com/VexonGIT/vexon-it/blob/main/docs/service-scope.md">Current service scope</a>.
+</aside>
 
 <!-- CONTENT AREA -->
 <main class="content">
@@ -496,13 +512,13 @@
   <!-- HOME PAGE -->
   <div class="page active" id="page-home">
     <div class="hero">
-      <div class="hero-label">Good to go</div>
+      <div class="hero-label">Internal demo</div>
       <div class="hero-name">Vexon IT</div>
-      <div class="hero-sub">Your field companion. Scripts, guides, income tracker, and homestead plan — all in one place.</div>
+      <div class="hero-sub">Scoped checklists and a demo planning tracker. No billing, customer portal or managed service is activated by this app.</div>
       <div class="hero-stats">
-        <div class="hstat"><div class="hstat-v" id="client-count">0</div><div class="hstat-l">Clients</div></div>
-        <div class="hstat"><div class="hstat-v" id="monthly-total">$0</div><div class="hstat-l">Monthly</div></div>
-        <div class="hstat"><div class="hstat-v">3</div><div class="hstat-l">Streams</div></div>
+        <div class="hstat"><div class="hstat-v" id="client-count">0</div><div class="hstat-l">Demo records</div></div>
+        <div class="hstat"><div class="hstat-v" id="monthly-total">$0</div><div class="hstat-l">Demo total</div></div>
+        <div class="hstat"><div class="hstat-v">Demo</div><div class="hstat-l">Not billing</div></div>
       </div>
     </div>
 
@@ -510,8 +526,8 @@
     <div class="quick-actions">
       <button class="qa-btn" onclick="openDrawer('walkin')">
         <div class="qa-icon">🗣️</div>
-        <div class="qa-label">Walk-In Pitch</div>
-        <div class="qa-sub">Script for cold visits</div>
+        <div class="qa-label">Business Fit</div>
+        <div class="qa-sub">Planning only</div>
       </button>
       <button class="qa-btn" onclick="openDrawer('onsite')">
         <div class="qa-icon">✅</div>
@@ -520,131 +536,135 @@
       </button>
       <button class="qa-btn" onclick="openDrawer('contract')">
         <div class="qa-icon">📄</div>
-        <div class="qa-label">Contract Template</div>
-        <div class="qa-sub">Monthly retainer</div>
+        <div class="qa-label">Terms Checklist</div>
+        <div class="qa-sub">Not a contract</div>
       </button>
       <button class="qa-btn" onclick="openDrawer('upsell')">
         <div class="qa-icon">🔄</div>
-        <div class="qa-label">Upsell Script</div>
-        <div class="qa-sub">Convert jobs to retainers</div>
+        <div class="qa-label">Care Discussion</div>
+        <div class="qa-sub">Readiness review</div>
       </button>
     </div>
 
     <div class="section-label">Today's Focus</div>
-    <div class="card" onclick="switchTab('guides')" style="--accent: var(--blue);">
+    <div class="card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" onclick="switchTab('guides')" style="--accent: var(--blue);">
       <div class="card-top">
         <div class="card-icon">📂</div>
         <div class="card-title">Open Job Aids & Guides</div>
         <div class="card-arrow">→</div>
       </div>
-      <div class="card-desc">Scripts, templates, AD setup, email walkthroughs, network checklist — everything for the field.</div>
+      <div class="card-desc">Scope, consent, planning and handoff checklists. Not executable setup procedures.</div>
     </div>
-    <div class="card" onclick="switchTab('income')" style="--accent: var(--green);">
+    <div class="card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" onclick="switchTab('income')" style="--accent: var(--green);">
       <div class="card-top">
         <div class="card-icon">💰</div>
-        <div class="card-title">Track Client Income</div>
+        <div class="card-title">Demo Planning Tracker</div>
         <div class="card-arrow">→</div>
       </div>
-      <div class="card-desc">Log your retainer clients and watch monthly recurring revenue grow.</div>
+      <div class="card-desc">Fictional planning figures only. Not customers, invoices, receipts or verified revenue.</div>
     </div>
   </div>
 
   <!-- GUIDES PAGE -->
   <div class="page" id="page-guides">
     <div class="page-title">Job Aids</div>
-    <div class="page-sub">Everything you need on a job. Tap to open full guide. Copy button included.</div>
+    <div class="page-sub">Internal reference drafts. Review rates, terms, and scope before client use. Copied guides include the prototype notice.</div>
 
-    <div class="section-label">Client Scripts</div>
-    <div class="card" onclick="openDrawer('walkin')" style="--accent: var(--blue);">
-      <div class="card-top"><div class="card-icon">🗣️</div><div class="card-title">Walk-In Cold Pitch Script</div><div class="card-arrow" style="color:var(--blue)">→</div></div>
-      <div class="card-desc">Word-for-word script. Opening line, 30-sec pitch, every objection handled, follow-up text.</div>
-      <div class="card-tags"><span class="tag" style="background:#3b82f622;color:var(--blue2)">Script</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Memorize this</span></div>
+    <div class="section-label">Internal Script Drafts</div>
+    <div class="card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" onclick="openDrawer('walkin')" style="--accent: var(--blue);">
+      <div class="card-top"><div class="card-icon">🗣️</div><div class="card-title">Business Fit Conversation</div><div class="card-arrow" style="color:var(--blue)">→</div></div>
+      <div class="card-desc">Ask about one need without promising a price, service launch or response time.</div>
+      <div class="card-tags"><span class="tag" style="background:#3b82f622;color:var(--blue2)">Script</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Internal draft</span></div>
     </div>
-    <div class="card" onclick="openDrawer('upsell')" style="--accent: var(--cyan);">
-      <div class="card-top"><div class="card-icon">🔄</div><div class="card-title">Upsell to Retainer Script</div><div class="card-arrow" style="color:var(--cyan)">→</div></div>
-      <div class="card-desc">Say this while packing up after a job. Converts one-time customers to $200+/mo clients.</div>
-      <div class="card-tags"><span class="tag" style="background:#22d3ee22;color:var(--cyan)">Script</span><span class="tag" style="background:#ffffff10;color:#ffffff60">After every job</span></div>
+    <div class="card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" onclick="openDrawer('upsell')" style="--accent: var(--cyan);">
+      <div class="card-top"><div class="card-icon">🔄</div><div class="card-title">Ongoing Care Discussion</div><div class="card-arrow" style="color:var(--cyan)">→</div></div>
+      <div class="card-desc">Draft conversation about ongoing support. Retainer work needs a separate agreed scope and quote.</div>
+      <div class="card-tags"><span class="tag" style="background:#22d3ee22;color:var(--cyan)">Script</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Internal draft</span></div>
     </div>
 
-    <div class="section-label">Templates</div>
-    <div class="card" onclick="openDrawer('contract')" style="--accent: var(--purple);">
-      <div class="card-top"><div class="card-icon">📄</div><div class="card-title">Monthly Retainer Contract</div><div class="card-arrow" style="color:var(--purple)">→</div></div>
-      <div class="card-desc">Simple 1-page service agreement. Print and sign on the spot.</div>
-      <div class="card-tags"><span class="tag" style="background:#8b5cf622;color:var(--purple)">Template</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Print ready</span></div>
+    <div class="section-label">Internal Template Drafts</div>
+    <div class="card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" onclick="openDrawer('contract')" style="--accent: var(--purple);">
+      <div class="card-top"><div class="card-icon">📄</div><div class="card-title">Agreement Review Checklist</div><div class="card-arrow" style="color:var(--purple)">→</div></div>
+      <div class="card-desc">Review questions only. Not a signable agreement or legal advice.</div>
+      <div class="card-tags"><span class="tag" style="background:#8b5cf622;color:var(--purple)">Template</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Internal draft</span></div>
     </div>
-    <div class="card" onclick="openDrawer('invoice')" style="--accent: var(--gold);">
-      <div class="card-top"><div class="card-icon">🧾</div><div class="card-title">Invoice + Wave Setup</div><div class="card-arrow" style="color:var(--gold)">→</div></div>
-      <div class="card-desc">Monthly invoice template + how to set up auto-billing in Wave (free app).</div>
-      <div class="card-tags"><span class="tag" style="background:#f59e0b22;color:var(--gold)">Template</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Automates billing</span></div>
+    <div class="card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" onclick="openDrawer('invoice')" style="--accent: var(--gold);">
+      <div class="card-top"><div class="card-icon">🧾</div><div class="card-title">Billing Readiness Checklist</div><div class="card-arrow" style="color:var(--gold)">→</div></div>
+      <div class="card-desc">No payment integration. Confirm quote, tax, terms, consent and tested billing first.</div>
+      <div class="card-tags"><span class="tag" style="background:#f59e0b22;color:var(--gold)">Template</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Readiness only</span></div>
     </div>
-    <div class="card" onclick="openDrawer('flyer')" style="--accent: var(--green);">
-      <div class="card-top"><div class="card-icon">📋</div><div class="card-title">Flyer Text for Canva</div><div class="card-arrow" style="color:var(--green)">→</div></div>
-      <div class="card-desc">Exact copy for your Vexon IT flyer. Print 30 copies at Walmart for $6.</div>
-      <div class="card-tags"><span class="tag" style="background:#10b98122;color:var(--green)">Template</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Print $6</span></div>
+    <div class="card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" onclick="openDrawer('flyer')" style="--accent: var(--green);">
+      <div class="card-top"><div class="card-icon">📋</div><div class="card-title">Residential and Business Copy</div><div class="card-arrow" style="color:var(--green)">→</div></div>
+      <div class="card-desc">Separate home PC support from business projects and proposed managed care.</div>
+      <div class="card-tags"><span class="tag" style="background:#10b98122;color:var(--green)">Template</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Internal draft</span></div>
     </div>
 
     <div class="section-label">On-Site Checklists</div>
-    <div class="card" onclick="openDrawer('onsite')" style="--accent: var(--green);">
+    <div class="card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" onclick="openDrawer('onsite')" style="--accent: var(--green);">
       <div class="card-top"><div class="card-icon">✅</div><div class="card-title">WiFi & Network Job Checklist</div><div class="card-arrow" style="color:var(--green)">→</div></div>
-      <div class="card-desc">Before you go, on arrival, diagnosing, fixing, handoff, collect payment, upsell.</div>
+      <div class="card-desc">Confirm audience, permission, written quote, safe changes and tested handoff.</div>
       <div class="card-tags"><span class="tag" style="background:#10b98122;color:var(--green)">Checklist</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Every job</span></div>
     </div>
-    <div class="card" onclick="openDrawer('handoff')" style="--accent: var(--blue);">
+    <div class="card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" onclick="openDrawer('handoff')" style="--accent: var(--blue);">
       <div class="card-top"><div class="card-icon">📋</div><div class="card-title">Client Handoff Checklist</div><div class="card-arrow" style="color:var(--blue)">→</div></div>
-      <div class="card-desc">What to leave behind after every job. Passwords, network info, your contact card.</div>
+      <div class="card-desc">Leave the checks, results and open issues. Transfer necessary access information securely.</div>
       <div class="card-tags"><span class="tag" style="background:#3b82f622;color:var(--blue2)">Checklist</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Leave behind</span></div>
     </div>
 
-    <div class="section-label">Technical Guides</div>
-    <div class="card" onclick="openDrawer('workgroup')" style="--accent: var(--cyan);">
-      <div class="card-top"><div class="card-icon">🔌</div><div class="card-title">Workgroup Setup (1–5 PCs)</div><div class="card-arrow" style="color:var(--cyan)">→</div></div>
-      <div class="card-desc">File sharing, mapped drives, shared printer. No server. Step by step.</div>
-      <div class="card-tags"><span class="tag" style="background:#22d3ee22;color:var(--cyan)">Walkthrough</span><span class="tag" style="background:#ffffff10;color:#ffffff60">No server needed</span></div>
+    <div class="section-label">Technical Scope Checklists</div>
+    <div class="card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" onclick="openDrawer('workgroup')" style="--accent: var(--cyan);">
+      <div class="card-top"><div class="card-icon">🔌</div><div class="card-title">Shared-Resource Planning</div><div class="card-arrow" style="color:var(--cyan)">→</div></div>
+      <div class="card-desc">Define permissions and acceptance tests; use current vendor instructions.</div>
+      <div class="card-tags"><span class="tag" style="background:#22d3ee22;color:var(--cyan)">Walkthrough</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Scope first</span></div>
     </div>
-    <div class="card" onclick="openDrawer('m365')" style="--accent: var(--purple);">
-      <div class="card-top"><div class="card-icon">🏢</div><div class="card-title">Microsoft 365 + Azure AD Setup</div><div class="card-arrow" style="color:var(--purple)">→</div></div>
-      <div class="card-desc">Create tenant, add users, set up email, join PCs to Azure AD. Full walkthrough.</div>
-      <div class="card-tags"><span class="tag" style="background:#8b5cf622;color:var(--purple)">Walkthrough</span><span class="tag" style="background:#fbbf2422;color:var(--gold)">Recurring Revenue</span></div>
+    <div class="card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" onclick="openDrawer('m365')" style="--accent: var(--purple);">
+      <div class="card-top"><div class="card-icon">🏢</div><div class="card-title">Microsoft 365 Scope</div><div class="card-arrow" style="color:var(--purple)">→</div></div>
+      <div class="card-desc">Customer-owned tenant, verified licenses, limited roles and scoped work.</div>
+      <div class="card-tags"><span class="tag" style="background:#8b5cf622;color:var(--purple)">Walkthrough</span><span class="tag" style="background:#fbbf2422;color:var(--gold)">By quote</span></div>
     </div>
-    <div class="card" onclick="openDrawer('email')" style="--accent: var(--gold);">
-      <div class="card-top"><div class="card-icon">📧</div><div class="card-title">Business Email Setup</div><div class="card-arrow" style="color:var(--gold)">→</div></div>
-      <div class="card-desc">Google Workspace vs M365. MX, SPF, DKIM, DMARC records. Configure on all devices.</div>
-      <div class="card-tags"><span class="tag" style="background:#f59e0b22;color:var(--gold)">Walkthrough</span><span class="tag" style="background:#ffffff10;color:#ffffff60">DNS records included</span></div>
+    <div class="card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" onclick="openDrawer('email')" style="--accent: var(--gold);">
+      <div class="card-top"><div class="card-icon">📧</div><div class="card-title">Business Email Scope</div><div class="card-arrow" style="color:var(--gold)">→</div></div>
+      <div class="card-desc">Confirm ownership, licenses, DNS change approval, rollback and mail tests.</div>
+      <div class="card-tags"><span class="tag" style="background:#f59e0b22;color:var(--gold)">Walkthrough</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Separate scope</span></div>
     </div>
-    <div class="card" onclick="openDrawer('network')" style="--accent: var(--red);">
-      <div class="card-top"><div class="card-icon">🌐</div><div class="card-title">Small Business Network Setup</div><div class="card-arrow" style="color:var(--red)">→</div></div>
-      <div class="card-desc">Router config, guest WiFi, static IPs, printer networking, security hardening.</div>
-      <div class="card-tags"><span class="tag" style="background:#ef444422;color:var(--red)">Walkthrough</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Hardware guide included</span></div>
+    <div class="card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" onclick="openDrawer('network')" style="--accent: var(--red);">
+      <div class="card-top"><div class="card-icon">🌐</div><div class="card-title">Network Project Scope</div><div class="card-arrow" style="color:var(--red)">→</div></div>
+      <div class="card-desc">Define equipment, work, permissions, downtime, pricing and acceptance tests.</div>
+      <div class="card-tags"><span class="tag" style="background:#ef444422;color:var(--red)">Walkthrough</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Separate quote</span></div>
     </div>
-    <div class="card" onclick="openDrawer('pricing')" style="--accent: var(--green);">
-      <div class="card-top"><div class="card-icon">💵</div><div class="card-title">Vexon IT Pricing Card</div><div class="card-arrow" style="color:var(--green)">→</div></div>
-      <div class="card-desc">Flat rate pricing for every service. Show clients on your iPad or print it.</div>
-      <div class="card-tags"><span class="tag" style="background:#10b98122;color:var(--green)">Pricing</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Show clients</span></div>
+    <div class="card" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" onclick="openDrawer('pricing')" style="--accent: var(--green);">
+      <div class="card-top"><div class="card-icon">💵</div><div class="card-title">Residential vs Business Scope</div><div class="card-arrow" style="color:var(--green)">→</div></div>
+      <div class="card-desc">Approved home PC offer and separate business readiness rules. No historical rate card.</div>
+      <div class="card-tags"><span class="tag" style="background:#10b98122;color:var(--green)">Planning</span><span class="tag" style="background:#ffffff10;color:#ffffff60">Internal draft</span></div>
     </div>
   </div>
 
   <!-- INCOME PAGE -->
   <div class="page" id="page-income">
-    <div class="page-title">Income Tracker</div>
-    <div class="page-sub">Track your Vexon IT retainer clients and monthly recurring revenue.</div>
+    <div class="page-title">Demo Planning Tracker</div>
+    <div class="page-sub">Use fictional records only. Browser-local storage is not secure customer storage, a backup or an accounting ledger.</div>
 
     <div class="income-total">
-      <div class="it-label">Monthly Recurring Revenue</div>
+      <div class="it-label">Entered Monthly Planning Total</div>
       <div class="it-amount" id="mrr-display">$0</div>
-      <div class="it-sub" id="mrr-sub">Add your first client below</div>
+      <div class="it-sub" id="mrr-sub">Add a fictional demo record below</div>
     </div>
 
-    <div class="section-label">Active Clients</div>
+    <div class="section-label">Demo Records</div>
+    <div id="tracker-storage-notice" role="alert" hidden style="font-size:0.62rem;color:var(--gold);line-height:1.6;margin-bottom:10px">
+      <span id="tracker-storage-message"></span>
+      <button class="btn-ghost" id="tracker-clear-storage" onclick="clearUnreadableClients()" hidden>Delete unreadable demo data from this browser</button>
+    </div>
     <div id="client-list"></div>
 
-    <button class="add-client-btn" onclick="toggleClientForm()">+ Add Client</button>
+    <button class="add-client-btn" onclick="toggleClientForm()">+ Add Demo Record</button>
     <div class="client-form" id="client-form">
       <div class="form-row">
-        <input class="inp" id="cf-name" placeholder="Business name" />
+        <input class="inp" id="cf-name" placeholder="Fictional demo name" aria-label="Fictional demo name" maxlength="120" />
       </div>
       <div class="form-row">
-        <input class="inp" id="cf-rate" placeholder="Monthly rate ($)" type="number" />
-        <input class="inp" id="cf-city" placeholder="City" />
+        <input class="inp" id="cf-rate" placeholder="Monthly planning amount ($)" aria-label="Monthly planning amount in dollars" type="number" min="0" step="0.01" oninput="this.setCustomValidity('')" />
+        <input class="inp" id="cf-city" placeholder="City" aria-label="Demo city" maxlength="120" />
       </div>
       <div class="form-row">
         <button class="btn-primary" onclick="addClient()">Add</button>
@@ -652,120 +672,28 @@
       </div>
     </div>
 
-    <div class="section-label">Income Milestones</div>
+    <div class="section-label">Demo Planning Thresholds</div>
     <div id="milestones-list"></div>
   </div>
 
-  <!-- NOTION PAGE -->
+  <!-- READINESS PAGE: retains navigation ID for compatibility -->
   <div class="page" id="page-notion">
-    <div class="page-title">Notion Setup</div>
-    <div class="page-sub">Your Vexon IT back office. Set this up once — use it forever.</div>
-
-    <div class="install-box">
-      <div class="ib-title">📱 Add This App to Your Home Screen First</div>
-      <div class="ib-step"><div class="ib-num">1</div><div class="ib-text">Open this page in <b>Safari</b> (must be Safari, not Chrome)</div></div>
-      <div class="ib-step"><div class="ib-num">2</div><div class="ib-text">Tap the <b>Share button</b> (box with arrow pointing up) at the bottom</div></div>
-      <div class="ib-step"><div class="ib-num">3</div><div class="ib-text">Scroll down and tap <b>"Add to Home Screen"</b></div></div>
-      <div class="ib-step"><div class="ib-num">4</div><div class="ib-text">Name it <b>"Vexon IT"</b> → tap Add</div></div>
-      <div class="ib-step"><div class="ib-num">5</div><div class="ib-text">Now it lives on your iPad home screen like a real app — full screen, no browser bar</div></div>
+    <div class="page-title">Before accepting work</div>
+    <div class="page-sub">A checklist is not proof that service is active.</div>
+    <div class="card">
+      <h2>Residential</h2>
+      <p>Use the $89 remote PC offer only for a home user's own PC: one main issue, up to 60 minutes. Work for an employer, organization or business account needs a separate business review—even from a home office.</p>
+      <p>Confirm fit, consent, commercial tool rights, appointment, written scope and total. Home visits and other device help are by quote.</p>
     </div>
-
-    <div class="notion-hero">
-      <div class="notion-icon">📓</div>
-      <div>
-        <div class="notion-title">Vexon IT Notion Workspace</div>
-        <div class="notion-sub">Free at notion.so — works on iPhone, iPad, and PC. This is your back office: client notes, prospect tracking, invoices, goals.</div>
-      </div>
+    <div class="card">
+      <h2>Business</h2>
+      <p>No monthly price or active managed coverage is established here. Confirm devices, users, duties, actual capacity, service hours, licensed tools, support allowance, escalation and price before a pilot.</p>
     </div>
-
-    <div class="section-label">Setup Steps</div>
-    <div class="notion-step">
-      <div class="ns-num">1</div>
-      <div class="ns-body">
-        <div class="ns-title">Create Your Free Account</div>
-        <div class="ns-text">Go to <b>notion.so</b> → Sign up free with your email. Download the app on your iPhone and iPad. This syncs everything automatically.</div>
-      </div>
-    </div>
-    <div class="notion-step">
-      <div class="ns-num">2</div>
-      <div class="ns-body">
-        <div class="ns-title">Create a "Vexon IT" Workspace Page</div>
-        <div class="ns-text">Click <b>+ New Page</b> → Title it <b>🖥️ Vexon IT Operations</b>. This is your home base. Everything lives inside here.</div>
-      </div>
-    </div>
-    <div class="notion-step">
-      <div class="ns-num">3</div>
-      <div class="ns-body">
-        <div class="ns-title">Create These 6 Sub-Pages</div>
-        <div class="ns-text">Inside your Vexon IT page, create one page for each of these:</div>
-        <div class="ns-code">📋 Prospect Tracker
-💼 Active Clients
-🧾 Invoices & Payments
-🛠️ Job Notes
-🌾 Ranch Goal Tracker
-📚 Reference Guides</div>
-      </div>
-    </div>
-    <div class="notion-step">
-      <div class="ns-num">4</div>
-      <div class="ns-body">
-        <div class="ns-title">Set Up Prospect Tracker as a Database</div>
-        <div class="ns-text">Open <b>Prospect Tracker</b> → Type <b>/table</b> → Create inline database. Add these columns:</div>
-        <div class="ns-code">Business Name   → Title (default)
-Owner Name      → Text
-Phone           → Phone
-City            → Select (Pharr/Harlingen/Brownsville)
-Status          → Select (Cold/Contacted/Interested/Client/No)
-Date Visited    → Date
-Follow Up Date  → Date
-Monthly Rate    → Number
-Notes           → Text</div>
-        <div class="ns-text" style="margin-top:6px">Now every prospect you visit gets a row. Filter by Status to see who to follow up with today.</div>
-      </div>
-    </div>
-    <div class="notion-step">
-      <div class="ns-num">5</div>
-      <div class="ns-body">
-        <div class="ns-title">Set Up Active Clients Database</div>
-        <div class="ns-text">Open <b>Active Clients</b> → Type <b>/table</b> → Add these columns:</div>
-        <div class="ns-code">Business Name   → Title
-Contact Name    → Text
-Phone           → Phone
-Monthly Rate    → Number
-Start Date      → Date
-Invoice Day     → Select (1st/15th)
-Paid This Month → Checkbox
-Notes           → Text
-Contract Signed → Checkbox</div>
-      </div>
-    </div>
-    <div class="notion-step">
-      <div class="ns-num">6</div>
-      <div class="ns-body">
-        <div class="ns-title">Set Up Ranch Goal Tracker</div>
-        <div class="ns-text">Open <b>Ranch Goal Tracker</b> → Use this simple layout:</div>
-        <div class="ns-code">🎯 GOAL: $25,000 land down payment
-
-💰 Saved so far: $______
-📅 Monthly saving: $______
-📆 On track for: ______
-
-MILESTONES:
-☐ $500  — Open Ally savings account
-☐ $1,000 — Visit FSA office
-☐ $3,000 — Emergency fund done
-☐ $5,000 — Start land search
-☐ $8,000 — Credit score 620+
-☐ $25,000 — DOWN PAYMENT READY 🏡</div>
-        <div class="ns-text" style="margin-top:6px">Update this every payday. Watching it grow is the motivation to keep going.</div>
-      </div>
-    </div>
-    <div class="notion-step">
-      <div class="ns-num">7</div>
-      <div class="ns-body">
-        <div class="ns-title">Daily Workflow in Notion</div>
-        <div class="ns-text"><b>Morning:</b> Check Follow Up Date column — who do you need to text today?<br><br><b>After a job:</b> Add notes to Job Notes page — what you fixed, passwords, what they need next.<br><br><b>1st of month:</b> Check Paid This Month checkboxes — who hasn't paid?<br><br><b>Payday:</b> Update Ranch Goal Tracker savings amount.</div>
-      </div>
+    <div class="card">
+      <h2>Release gates</h2>
+      <p>Verify the contracting identity and terms with qualified advisers. Test access consent/revocation, ticket routing, billing and any agreed recovery process on authorized test data. Contact delivery and production deployment remain unverified here.</p>
+      <p>No guaranteed response, fix, recovery or security outcome. No round-the-clock support or compliance certification is claimed. Do not use employer assets, accounts, licenses, customer data or time.</p>
+      <a href="docs/service-scope.md">Read the current service scope</a>
     </div>
   </div>
 
@@ -783,16 +711,16 @@ MILESTONES:
   </button>
   <button class="nav-item" id="nav-income" onclick="switchTab('income')">
     <span class="nav-icon">💰</span>
-    <span class="nav-label">Income</span>
+    <span class="nav-label">Demo</span>
   </button>
   <button class="nav-item" id="nav-notion" onclick="switchTab('notion')">
     <span class="nav-icon">📓</span>
-    <span class="nav-label">Notion</span>
+    <span class="nav-label">Readiness</span>
   </button>
 </nav>
 
 <!-- DRAWER OVERLAY -->
-<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
+<div class="drawer-overlay" id="drawer-overlay" role="dialog" aria-modal="true" aria-labelledby="drawer-title" onclick="closeDrawer()" onkeydown="handleDrawerKey(event)">
   <div class="drawer" onclick="event.stopPropagation()">
     <div class="drawer-handle"></div>
     <div class="drawer-header">
@@ -800,14 +728,14 @@ MILESTONES:
         <div class="drawer-tag-line" id="drawer-tag">Guide</div>
         <div class="drawer-title" id="drawer-title">Title</div>
       </div>
-      <button class="drawer-close" onclick="closeDrawer()">×</button>
+      <button class="drawer-close" id="drawer-close" aria-label="Close guide" onclick="closeDrawer()">×</button>
     </div>
     <div class="drawer-toolbar">
       <button class="copy-btn" id="copy-btn" onclick="copyContent()">📋 Copy All</button>
       <span class="scroll-hint">↓ Scroll for full guide</span>
     </div>
     <div class="drawer-body">
-      <pre class="guide-pre" id="drawer-content"></pre>
+      <pre class="guide-pre" id="drawer-content" tabindex="0"></pre>
     </div>
   </div>
 </div>
@@ -816,890 +744,65 @@ MILESTONES:
 // ── GUIDES DATA ──────────────────────────────────────────────────
 const GUIDES = {
   walkin: {
-    tag: "SCRIPT — Memorize This",
-    title: "Walk-In Cold Pitch Script",
-    content: `BEFORE YOU WALK IN
-─────────────────────────────
-✓ Wear a clean collared shirt or polo
-✓ Have 2 Vexon IT business cards in your pocket
-✓ Ask for the OWNER or MANAGER — not the cashier
-✓ Best times: Tue–Thu, 2pm–4pm (slow hours)
-✓ Best cities: Pharr, Harlingen, Brownsville
-✓ Goal: 5 businesses per city per week
-
-
-OPENING LINE (say word for word)
-─────────────────────────────
-"Hey, my name is [YOUR NAME] — I'm with 
-Vexon IT, a local tech support company 
-here in the Valley. Do you have 2 minutes? 
-We help small businesses with their 
-computers and internet so they're never 
-stuck waiting on a 1-800 number."
-
-
-THE PITCH (30 seconds)
-─────────────────────────────
-"So basically what Vexon IT does is charge 
-a flat monthly rate — usually $200 to $300 
-a month — and for that you get us. You call 
-us, we answer. Computer freezes, printer 
-dies, WiFi goes down right before a busy 
-Friday night — we fix it. Remote or in person.
-
-Most of our clients say it pays for itself 
-the first time they have a problem."
-
-
-OBJECTION: "WE ALREADY HAVE SOMEONE"
-─────────────────────────────
-"That's great — how responsive are they 
-when something breaks on a Friday night? 
-Vexon IT is local, fast, flat rate — no 
-surprise bills. Not asking you to drop 
-anyone, just keep our card. If they ever 
-leave you hanging, you'll know who to call."
-→ Hand them your card and leave
-
-
-OBJECTION: "WE DON'T HAVE IT PROBLEMS"
-─────────────────────────────
-"That's usually because nothing's gone 
-wrong yet. Most of our clients said the 
-same thing — until their POS system crashed 
-on a Saturday. We're like insurance — you 
-don't need us until you really do. Flat 
-rate means no surprise bill when that day 
-comes."
-
-
-THE CLOSE
-─────────────────────────────
-"I'll leave you our card. Can I get your 
-name and the best number for you?"
-→ Write their name down in front of them
-
-
-FOLLOW-UP TEXT (send 2 days later)
-─────────────────────────────
-"Hey [NAME], this is [YOUR NAME] from 
-Vexon IT — stopped by [BUSINESS] on [DAY]. 
-Just following up — we have one support 
-spot open in [CITY] this month at $[RATE]/mo. 
-No contracts, cancel anytime. Want me to 
-swing by and answer questions?"`,
+    tag: "REFERENCE — Review Scope Before Work",
+    title: "Business fit conversation",
+    content: "Ask permission to discuss one business IT need. Ask who owns IT today, who can approve work, and which task needs help. Do not claim an existing relationship, limited availability, certifications, unlimited help or a fixed monthly rate. Offer a free 20-minute planning call only: no troubleshooting, assessment, access or changes. Business work needs a separate written quote and readiness checks."
   },
-
   upsell: {
-    tag: "SCRIPT — After Every Job",
-    title: "Upsell to Monthly Retainer",
-    content: `WHEN TO DO THIS
-─────────────────────────────
-While packing up your gear after the job.
-They're happy. It's working. You're still there.
-This is the best possible moment.
-
-
-THE SCRIPT (casual, while packing up)
-─────────────────────────────
-"Everything looks solid — that should 
-hold for a long time. Hey, I wanted 
-to mention — Vexon IT has a few clients 
-on a monthly plan where we're basically 
-just their IT department on call.
-
-Flat [$ RATE] a month, I'm available 
-when something comes up. Remote or here 
-in person. For a place like yours it'd 
-probably be around [$RATE].
-
-I've got one spot open right now. 
-No contract, cancel anytime."
-
-
-IF THEY ASK "WHAT DOES THAT INCLUDE?"
-─────────────────────────────
-"Anything tech — computers acting up, 
-WiFi issues, passwords, new device setup, 
-whatever. Up to [X] hours a month. 
-Most months you won't even use it, 
-but when you need it you've got someone 
-who actually picks up the phone."
-
-
-IF THEY SAY "LET ME THINK ABOUT IT"
-─────────────────────────────
-"Totally, no pressure."
-→ Hand them a Vexon IT card
-"I'll text you in a couple days — 
-want to fill that spot locally."
-
-
-FOLLOW-UP TEXT (2 days later)
-─────────────────────────────
-"Hey [NAME] — [YOUR NAME] from Vexon IT, 
-fixed your [ISSUE] on [DAY]. Following up 
-on that monthly plan — $[RATE]/mo, no 
-contract. Still have one spot open. 
-Want me to send a quick breakdown?"`,
+    tag: "REFERENCE — Review Scope Before Work",
+    title: "Ongoing care discussion",
+    content: "A residential session does not include business support or a monthly plan. If a business asks for ongoing help, record its devices, users, tasks, sites and expected hours. Explain that managed care is being prepared, with no approved recurring rate or active coverage. Do not enroll, charge or install an agent until scope, capacity, tools, consent and acceptance checks pass."
   },
-
   contract: {
-    tag: "TEMPLATE — Print & Sign",
-    title: "Vexon IT Monthly Service Agreement",
-    content: `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  VEXON IT SERVICES
-  MONTHLY SUPPORT AGREEMENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Technician: ______________________
-            Vexon IT Services
-
-Client:     ______________________
-            (Business name)
-
-Contact:    ______________________
-            (Owner / manager name)
-
-Date:       ______________________
-
-
-MONTHLY RATE
-──────────────────────────────
-$__________ per month
-Due: 1st of each month
-Accepted: Zelle · Venmo · Cash · Check
-
-
-WHAT'S INCLUDED
-──────────────────────────────
-✓ Up to [4] hrs remote support/month
-✓ Up to [2] on-site visits/month
-✓ Virus and malware removal
-✓ Printer and WiFi troubleshooting
-✓ Software installs and updates
-✓ Email setup and password resets
-✓ Phone support Mon–Fri 9am–6pm
-✓ Same-day response for urgent issues
-
-
-WHAT'S NOT INCLUDED
-──────────────────────────────
-✗ Hardware parts (billed at cost)
-✗ Work beyond included hours
-  (billed at $65/hr)
-✗ Data recovery from physical damage
-✗ Custom software development
-
-
-CANCELLATION
-──────────────────────────────
-Either party: 30 days written notice.
-No cancellation fees.
-
-
-LIABILITY
-──────────────────────────────
-Vexon IT is not liable for data loss,
-hardware failure, or pre-existing issues.
-Backups are always recommended.
-
-
-SIGNATURES
-──────────────────────────────
-Vexon IT:  ____________________
-
-Client:    ____________________
-
-Date:      ____________________
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  Questions: [YOUR PHONE]
-  vexonit.com
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
+    tag: "REFERENCE — Review Scope Before Work",
+    title: "Agreement review checklist — not a contract",
+    content: "Do not sign this checklist or present it as an agreement. Before work, verify the contracting party and any DBA, authority, insurance where relevant, and applicable terms with qualified advisers. The actual agreement must state customer and audience, scope, devices, time, exclusions, price, tax, travel, materials, payment, changes, cancellation/refunds, data handling, access removal and handoff. Business agreements also need service hours, allowance, escalation, renewal and exit terms. Do not invent a liability waiver or promise that a disclaimer removes legal rights."
   },
-
   invoice: {
-    tag: "TEMPLATE — Monthly Billing",
-    title: "Invoice + Wave Auto-Pay Setup",
-    content: `WAVE APP SETUP (free at wave.com)
-─────────────────────────────
-1. Go to wave.com → Create free account
-2. Settings → Business Info:
-   Name:  Vexon IT Services
-   Phone: [YOUR NUMBER]
-   City:  Pharr, TX
-3. Add your logo (make free at canva.com)
-4. Customers → Add each client
-5. Invoices → Create Invoice:
-   Line item: "Monthly IT Support — [Month]"
-   Amount: $[RATE]
-   Due: Net 7
-6. Recurring → Auto-send on 1st of month
-7. Done — Wave emails it automatically
-
-
-INVOICE LINE ITEM TEXT
-─────────────────────────────
-Monthly IT Support Retainer
-Vexon IT Services — [Month] [Year]
-Remote + on-site support as needed
-$[RATE].00
-
-
-EMAIL TO SEND WITH INVOICE
-─────────────────────────────
-Subject: Vexon IT Invoice — [Month] — [Business]
-
-Hey [NAME],
-
-Here's your invoice for this month's 
-IT support with Vexon IT.
-Let me know if anything needs attention.
-
-[WAVE INVOICE LINK]
-
-Thanks,
-[YOUR NAME]
-Vexon IT Services
-[YOUR PHONE]
-
-
-PAYMENT REMINDER (send on 8th if unpaid)
-─────────────────────────────
-"Hey [NAME] — just a reminder your Vexon IT 
-invoice for [month] is still open — $[AMOUNT]. 
-Whenever you get a chance.
-Zelle: [YOUR NUMBER]
-Venmo: @[YOUR HANDLE]
-Thanks!"`,
+    tag: "REFERENCE — Review Scope Before Work",
+    title: "Billing readiness checklist",
+    content: "No payment processor or billing integration is implemented here. Match the invoice to an approved written quote and completed work. Keep residential sessions, business projects, recurring support, software, travel, materials and applicable tax separate. Confirm tax treatment with a qualified adviser. Verify receipts, failed-payment handling, cancellation/refund terms and recurring-charge consent before billing. Do not collect card details in this app or turn demo totals into invoices."
   },
-
   flyer: {
-    tag: "TEMPLATE — Print at Walmart $6",
-    title: "Vexon IT Flyer for Canva",
-    content: `HOW TO MAKE THE FLYER
-─────────────────────────────
-1. Go to canva.com (free account)
-2. Search "business flyer"
-3. Pick a dark blue/navy template
-4. Replace ALL text with what's below
-5. Add your phone number and email
-6. Download as PDF (Print quality)
-7. Go to Walmart Photo Center
-8. Print 30–50 copies at $0.20/page
-9. Total cost: $6–10
-
-
-FLYER TEXT (copy exactly)
-─────────────────────────────
-
-HEADLINE:
-Is Your Computer Slowing Down Your Business?
-
-SUBHEADLINE:
-Vexon IT — Local Support · Flat Monthly Rate
-
-
-BODY:
-We help RGV small businesses with:
-
-  ✓ Computers that freeze or run slow
-  ✓ WiFi and internet problems
-  ✓ Printers that won't connect
-  ✓ Virus and security issues
-  ✓ Email setup and passwords
-  ✓ Anything tech-related
-
-One flat rate. We answer when you call.
-No surprise bills. Ever.
-
-
-PRICING BOX:
-Starting at $199/month
-No long-term contracts · Cancel anytime
-
-
-CONTACT:
-Vexon IT Services
-📱 [YOUR PHONE NUMBER]
-📧 [YOUR EMAIL]
-🌐 vexonit.com
-
-Serving: Pharr · Harlingen · Brownsville · McAllen
-
-
-FOOTER:
-"Local tech support for local businesses."
-Vexon IT Services — Rio Grande Valley, TX
-
-
-BUSINESS CARD (front):
-VEXON IT SERVICES
-[YOUR NAME]
-IT Support Specialist
-📱 [PHONE] · 📧 [EMAIL]
-vexonit.com
-
-BUSINESS CARD (back):
-Monthly IT Support Starting at $199/mo
-✓ Computers  ✓ WiFi  ✓ Printers
-✓ Email  ✓ Security  ✓ On-site
-Pharr · Harlingen · Brownsville`,
+    tag: "REFERENCE — Review Scope Before Work",
+    title: "Residential and business copy",
+    content: "RESIDENTIAL: Remote PC support is $89 for one PC, one main issue, up to 60 minutes. Fit, consent, tools, availability and the written total must be confirmed before booking. Time and assessment are covered; a repair is not promised. Home visits, existing Wi-Fi, printer and device help are by quote.\n\nBUSINESS: Projects and managed care are separate from residential help. Managed care is being prepared; no recurring rate or active coverage is offered here. Request a planning call and a separately scoped quote. A free 20-minute planning call is not technical work or permission to access systems.\n\nContact: support@vexonit.com | (956) 513-0218. Do not send passwords, recovery codes, card details or private files."
   },
-
   onsite: {
-    tag: "CHECKLIST — Every Job",
-    title: "WiFi & Network Job Checklist",
-    content: `BEFORE YOU GO
-─────────────────────────────
-[ ] Confirm address and parking
-[ ] Confirm exact problem via text
-[ ] Give flat price quote BEFORE going
-[ ] Get their agreement on price
-[ ] Charge your laptop overnight
-[ ] Pack: laptop, ethernet cable, phone
-[ ] Optional: spare router for testing
-
-
-WHEN YOU ARRIVE
-─────────────────────────────
-[ ] Introduce yourself professionally
-[ ] "Can you show me where everything is?"
-[ ] Take a BEFORE photo of current setup
-[ ] Get WiFi password + router admin login
-[ ] Note router make and model
-
-
-DIAGNOSE THE PROBLEM
-─────────────────────────────
-[ ] Run speed test: fast.com on their WiFi
-[ ] Plug laptop direct to modem with cable
-[ ] Run speed test again
-    Fast direct = router problem
-    Slow direct = ISP problem
-[ ] Check router placement:
-    Bad: inside cabinet, near microwave
-    Good: central, elevated, in the open
-[ ] Check 2.4GHz vs 5GHz both enabled
-
-
-FIX / SET UP
-─────────────────────────────
-[ ] Log into router: 192.168.1.1 or 0.1
-[ ] Update router firmware
-[ ] Set strong WiFi password
-[ ] Name networks:
-    Staff: [Business]-Staff
-    Guest: [Business]-Guest
-[ ] Enable client isolation on guest
-[ ] Place router in optimal spot
-[ ] Test signal in every room/area
-[ ] Connect all their main devices
-
-
-HANDOFF
-─────────────────────────────
-[ ] Write ALL passwords on a card:
-    Router Admin IP: ___________
-    Router User/Pass: __________
-    WiFi Name: ________________
-    WiFi Password: _____________
-    Guest WiFi: ________________
-[ ] Show them how to restart router
-[ ] Take AFTER photo of clean setup
-[ ] Collect payment BEFORE leaving
-    Zelle / Venmo / Cash only
-[ ] "If anything acts up in 2 weeks,
-    text me — I'll help remotely free"
-[ ] Offer monthly retainer upsell`,
+    tag: "REFERENCE — Review Scope Before Work",
+    title: "Authorized visit checklist",
+    content: "Confirm whether the job is residential or business. Obtain a written task list, appointment, authority, travel, materials, tax treatment, payment and cancellation/refund terms, and total. No published flat onsite rate applies. Before access, agree on device/account, tool, access period, data handling and rollback appropriate to risk. Ask before taking photos. Work only within scope. Stop for extra work, safety, licensing or access gaps. Handoff: checks, changes, results, unresolved issues and access removal. Do not promise a repair or free follow-up."
   },
-
   handoff: {
-    tag: "CHECKLIST — Leave Behind",
-    title: "Client Handoff Checklist",
-    content: `BEFORE YOU LEAVE EVERY JOB
-─────────────────────────────
-[ ] All passwords written on a card
-    and left with owner
-[ ] Network info sheet filled out:
-
-    ─── VEXON IT — NETWORK INFO ───
-    Business: ___________________
-    Date: _______________________
-    
-    Router Brand/Model: _________
-    Router Admin IP: ____________
-    Router Admin User: __________
-    Router Admin Pass: __________
-    
-    Staff WiFi Name: ____________
-    Staff WiFi Pass: ____________
-    Guest WiFi Name: ____________
-    Guest WiFi Pass: ____________
-    
-    Printer IP: _________________
-    Printer Model: ______________
-    
-    Internet Provider: __________
-    ISP Support #: ______________
-    
-    Vexon IT: [YOUR PHONE]
-    ────────────────────────────
-
-[ ] Every device tested and confirmed
-[ ] Client walked through what you did
-[ ] Client knows how to restart router
-[ ] Client has your number saved in phone
-[ ] Invoice sent or cash collected
-[ ] Asked: "Anything else acting up?"
-[ ] Offered monthly retainer plan
-[ ] Took photo of final setup
-[ ] Added client to Notion tracker`,
+    tag: "REFERENCE — Review Scope Before Work",
+    title: "Customer handoff checklist",
+    content: "Record the agreed job, audience, work completed, tests and results, remaining gaps, costs and next owner. Separate assessment from repair. Confirm customer-owned accounts and a secure method of transferring any necessary access information; never store passwords, recovery codes or private files in this app, public repo or ordinary notes. End the remote session and revoke temporary access. Persistent access needs separate explicit consent. Record any agreed follow-up; do not imply ongoing coverage."
   },
-
   workgroup: {
-    tag: "WALKTHROUGH — 1 to 5 PCs",
-    title: "Workgroup Setup (No Server)",
-    content: `WHAT IS A WORKGROUP?
-─────────────────────────────
-Computers on the same network that share
-files and printers WITHOUT a server.
-Each PC manages its own users.
-Perfect for 1–5 person businesses.
-
-
-STEP 1 — NAME EVERY PC
-─────────────────────────────
-Right-click Start → System →
-"Rename this PC (advanced)"
-
-Name each PC logically:
-  REGISTER-01, OFFICE-01, BACK-01
-
-Set Workgroup name to business name:
-  PABLOS_TIRES or RIVERSIDE_SALON
-
-Restart the PC after renaming.
-
-
-STEP 2 — VERIFY SAME NETWORK
-─────────────────────────────
-Open CMD → type: ipconfig
-
-All PCs should show 192.168.X.X
-on same range (e.g. 192.168.1.X)
-
-Test connection between PCs:
-CMD → ping 192.168.1.[OTHER PC IP]
-Should say "Reply from..." ✓
-
-
-STEP 3 — CREATE USER ACCOUNTS
-─────────────────────────────
-Settings → Accounts → Other users
-→ Add someone else to this PC
-→ I don't have sign-in info
-→ Add user without Microsoft account
-
-Create:
-  Username: owner / manager / staff1
-  Password: something memorable
-  
-Account type:
-  Owner → Administrator
-  Staff → Standard User
-
-
-STEP 4 — ENABLE FILE SHARING
-─────────────────────────────
-Control Panel → Network and Sharing
-→ Change advanced sharing settings
-→ Turn ON: Network discovery
-→ Turn ON: File and printer sharing
-→ Turn OFF: Password protected sharing
-  (if you want open access on network)
-
-
-STEP 5 — SHARE A FOLDER
-─────────────────────────────
-Right-click folder → Properties →
-Sharing tab → Share
-
-Add: Everyone (or specific users)
-Permission: Read / Read+Write
-Note the path: \\COMPUTERNAME\Folder
-
-
-STEP 6 — MAP DRIVE ON OTHER PCs
-─────────────────────────────
-File Explorer → Right-click "This PC"
-→ Map Network Drive
-Drive letter: Z: (or any free letter)
-Path: \\COMPUTERNAME\SharedFolder
-✓ Reconnect at sign-in
-→ Enter credentials if asked
-
-Now shows as Z: drive always. ✓
-
-
-STEP 7 — SHARE A PRINTER
-─────────────────────────────
-On PC with printer:
-Settings → Printers → [Printer] →
-Printer properties → Sharing →
-✓ Share this printer
-Name it: OFFICEPRT
-
-On other PCs:
-Settings → Printers → Add device →
-"Printer I want isn't listed" →
-"Select shared printer by name" →
-\\COMPUTERNAME\OFFICEPRT
-
-
-COMMON FIXES
-─────────────────────────────
-Can't see other PCs:
-→ Network Discovery ON on ALL PCs
-→ Set network to Private (not Public)
-
-Can't connect to share:
-→ Try IP: \\192.168.1.X\ShareName
-→ Check Windows Firewall — allow
-  "File and Printer Sharing"
-
-Drive disconnects on restart:
-→ Remap with "Reconnect at sign-in"
-→ Or: net use Z: \\PC\Share /persistent:yes`,
+    tag: "REFERENCE — Review Scope Before Work",
+    title: "Shared-resource planning checklist",
+    content: "This is not an executable setup guide. Review the authorized devices, supported operating systems, account ownership, permissions and backup/rollback needs. Use current official vendor instructions for the actual configuration. Do not disable password-protected sharing, use shared administrator accounts, expose remote access, or grant broad file access to make a test pass. Test with the intended user's permissions and document the result. Business setup is separately quoted, not included in the residential PC session."
   },
-
   m365: {
-    tag: "WALKTHROUGH — 5 to 15 Users",
-    title: "Microsoft 365 + Azure AD Setup",
-    content: `WHY THIS OVER A PHYSICAL SERVER
-─────────────────────────────
-No server hardware needed.
-Runs in the cloud.
-$6–12.50/user/month (client pays Microsoft).
-One login for Windows + Email + Teams + OneDrive.
-Vexon IT charges setup + monthly management.
-
-
-PHASE 1 — CREATE M365 TENANT (30 min)
-─────────────────────────────
-1. Go to microsoft.com/microsoft-365/business
-2. Buy Now → Choose plan:
-   Basic ($6/user): email + web apps
-   Standard ($12.50/user): + desktop Office ★
-3. Enter: business name, size, country
-4. Create admin account:
-   admin@[business].onmicrosoft.com
-   SAVE THIS PASSWORD — it's the master key
-5. Verify domain (if they have website):
-   Admin Center → Settings → Domains
-   → Add their domain → Follow TXT verification
-   → Add TXT record in GoDaddy/Namecheap
-
-
-PHASE 2 — CREATE USER ACCOUNTS
-─────────────────────────────
-Admin Center → Users → Active users
-→ Add a user
-
-For each employee:
-  First/Last name
-  Username: firstname@company.com
-  ✓ Auto-generate password
-  ✓ Require change at first login
-  Assign license: M365 Business Standard
-  Role: User (no admin)
-  Owner/Manager: Global Administrator
-
-Send them their temp password.
-
-
-PHASE 3 — SET UP EMAIL
-─────────────────────────────
-Web (works immediately):
-→ User goes to outlook.com
-→ Sign in with firstname@company.com
-→ Done ✓
-
-Desktop Outlook:
-1. office.com → sign in with work account
-2. Install Office → run installer
-3. Open Outlook → Add account →
-   Enter @company.com → auto-configures
-4. Wait 2–5 min for mail to sync ✓
-
-iPhone/Android:
-→ Download Microsoft Outlook app
-→ Add account → Enter @company.com
-→ Sign in → Done ✓
-
-
-PHASE 4 — JOIN PCs TO AZURE AD
-─────────────────────────────
-This gives each user one login for
-everything — Windows + all M365 apps.
-
-On each PC:
-Settings → Accounts →
-Access work or school → Connect
-→ Join device to Azure Active Directory
-→ Enter: admin@[domain].onmicrosoft.com
-→ Follow prompts → Restart
-
-On login screen: Other user →
-Enter: firstname@company.com + password
-Windows sets up profile first time (3 min)
-
-Now Maria uses one password for:
-✓ Windows login
-✓ Outlook email
-✓ Teams
-✓ OneDrive
-✓ SharePoint
-
-
-PHASE 5 — FILE SHARING (OneDrive)
-─────────────────────────────
-Each user gets 1TB cloud storage.
-Files sync to desktop automatically.
-
-Share between users:
-Right-click folder → Share →
-Enter colleague's email → Done ✓
-
-Company-wide files → SharePoint:
-Admin Center → SharePoint → Sites →
-Create team site → Add all employees
-→ Everyone sees company files ✓
-
-
-WHAT TO CHARGE
-─────────────────────────────
-M365 tenant setup:          $200–300
-+ Domain + email setup:     +$150
-+ Per user setup:           $50/user
-+ Ongoing management:       $150–400/mo
-
-Example: 5 users
-Setup: $450 one-time
-Retainer: $250/mo
-(Client pays M365 licenses separately)`,
+    tag: "REFERENCE — Review Scope Before Work",
+    title: "Microsoft 365 scope checklist",
+    content: "Business work is separately quoted. Identify the customer-owned tenant, authorized approver, licensed users/devices and exact task. Verify current Microsoft licensing and role requirements; no vendor price or partner status is claimed here. Use least-privilege named access and approved change windows. Plan backup and rollback where appropriate. Validate the actual account/app/device outcome, document remaining gaps, and remove temporary access. Tenant creation, migrations, subscriptions and ongoing management are not included in the residential offer."
   },
-
   email: {
-    tag: "WALKTHROUGH — All Email Options",
-    title: "Business Email Setup",
-    content: `THE 3 OPTIONS
-─────────────────────────────
-Option A: Google Workspace
-  Cost: $6–12/user/month
-  Best for: Google users, Gmail lovers
-
-Option B: Microsoft 365
-  Cost: $6–12.50/user/month
-  Best for: Windows + Outlook users ★
-
-Option C: Hosting Email (GoDaddy etc.)
-  Cost: Usually free with hosting
-  Best for: 1–2 person tiny businesses
-
-
-GOOGLE WORKSPACE SETUP
-─────────────────────────────
-1. workspace.google.com → Get started
-2. Enter business info → their domain
-3. Create admin: admin@business.com
-4. Verify domain — add TXT record
-   in GoDaddy/Namecheap DNS:
-   Name: @
-   Value: [Google verification code]
-5. Set MX records (routes email to Google):
-   Priority 1:  ASPMX.L.GOOGLE.COM
-   Priority 5:  ALT1.ASPMX.L.GOOGLE.COM
-   Priority 5:  ALT2.ASPMX.L.GOOGLE.COM
-   Priority 10: ALT3.ASPMX.L.GOOGLE.COM
-   Priority 10: ALT4.ASPMX.L.GOOGLE.COM
-6. Create users: Admin → Users → Add user
-7. Email works at mail.google.com ✓
-
-
-DNS RECORDS — ALWAYS SET THESE
-─────────────────────────────
-SPF — Prevents spam flagging
-  Type: TXT  Name: @
-  Google:  "v=spf1 include:_spf.google.com ~all"
-  M365: "v=spf1 include:spf.protection.outlook.com ~all"
-
-DKIM — Email signature
-  Generated in Google/M365 admin
-  Copy → paste as TXT record in DNS
-
-DMARC — Extra spam protection
-  Type: TXT  Name: _dmarc
-  Value: "v=DMARC1; p=none; rua=mailto:admin@business.com"
-
-★ ALWAYS set SPF + DKIM + DMARC ★
-Without these, their emails land in spam.
-
-
-CONFIGURE EMAIL ON PHONE
-─────────────────────────────
-iPhone:
-  Settings → Mail → Add Account →
-  Microsoft Exchange (for M365/Google)
-  Email: firstname@company.com
-  Sign in with password → Done ✓
-
-Android:
-  Download Microsoft Outlook app
-  Add account → Exchange
-  Email + password → Done ✓
-
-Desktop Outlook (any email):
-  File → Add Account →
-  Enter email → Advanced setup →
-  IMAP settings from your host:
-    Incoming: mail.domain.com  Port 993 SSL
-    Outgoing: mail.domain.com  Port 587 TLS
-
-
-EMAIL SIGNATURE TEMPLATE
-─────────────────────────────
-[Full Name]
-[Job Title]
-[Business Name]
-📱 [Phone]
-📧 [Email]
-🌐 [Website]
-
-In Gmail: Settings → Signature
-In Outlook: File → Options → Mail → Signatures`,
+    tag: "REFERENCE — Review Scope Before Work",
+    title: "Business email scope checklist",
+    content: "Business email is separately scoped and quoted. Confirm customer ownership of domain, DNS, tenant and mailboxes; current licenses; authorized access; migration scope and rollback. Use current official provider guidance. A DNS change requires permission and a change window; test send/receive and agreed authentication outcomes before handoff. Record gaps without claiming all mail, data or security is guaranteed. Do not copy passwords into ordinary email or this app."
   },
-
   network: {
-    tag: "WALKTHROUGH — Router to Printer",
-    title: "Small Business Network Setup",
-    content: `HARDWARE TO KNOW
-─────────────────────────────
-MODEM: ISP-provided, leave alone
-ROUTER: The brain — replace ISP junk
-
-Recommended routers:
-  TP-Link Archer AX55 (~$80) — small office
-  TP-Link Deco AX3000 (~$180, 2pk) — mesh
-  Ubiquiti UniFi Express (~$150) — pro look
-
-SWITCH: More wired ports
-  TP-Link TL-SG108 8-port (~$20)
-  Plug into router → 11 wired ports
-
-CABLE: Always use CAT6 (~$15 per 25ft)
-
-
-FULL SETUP WALKTHROUGH
-─────────────────────────────
-STEP 1 — Connect router
-  Modem → Router WAN port (blue)
-  Laptop → Router LAN port (for setup)
-
-STEP 2 — Log into router admin
-  Browser → 192.168.1.1 or 192.168.0.1
-  (Check router label for exact IP)
-  Login: admin / admin → change this NOW
-
-STEP 3 — Configure router
-  WiFi Name (SSID): BusinessName-Staff
-  WiFi Password: Strong password
-  Admin password: DIFFERENT from WiFi
-  
-  Enable guest network:
-  SSID: BusinessName-Guest
-  ✓ Enable Client Isolation (critical)
-  This stops customers seeing staff devices
-
-STEP 4 — Set static IP for printer
-  Router admin → DHCP → Address Reservation
-  Find printer MAC address (on printer label)
-  Bind to IP: 192.168.1.10
-  Now printer always has same IP ✓
-
-STEP 5 — Add network printer to PCs
-  Settings → Printers → Add device →
-  "Printer I want isn't listed" →
-  "Add using TCP/IP address" →
-  Enter: 192.168.1.10 (printer's static IP)
-  Install drivers → Done ✓
-
-STEP 6 — Security hardening
-  [ ] Changed router admin password
-  [ ] Disabled WPS (vulnerability)
-  [ ] Using WPA3 or WPA2 (never WEP)
-  [ ] Guest network isolated from staff
-  [ ] Firewall enabled (default on)
-  [ ] Remote management disabled
-  [ ] Router firmware updated
-  [ ] All passwords documented for client
-
-
-WHAT TO CHARGE
-─────────────────────────────
-Basic home router setup:         $100–150
-Full small business (5 devices): $200–350
-+ Guest WiFi setup:              Included
-+ Security hardening:            +$75
-+ Cable running (per cable):     $25–50
-+ Network documentation:         Always included`,
+    tag: "REFERENCE — Review Scope Before Work",
+    title: "Network project scope checklist",
+    content: "Keep residential device help separate from business network projects. Confirm sites, devices, cabling, equipment, existing provider, permitted work and acceptance tests. Quote labor, materials, travel, tax and downtime separately as applicable. Do not promise coverage, speed, security, regulated work or equipment compatibility without evidence. Confirm any licensing/permit requirements and use a qualified specialist when needed. Obtain change approval, rollback and backup plans; test the agreed connections and hand off customer-owned records securely."
   },
-
   pricing: {
-    tag: "PRICING CARD — Show Clients",
-    title: "Vexon IT Flat Rate Pricing",
-    content: `┌──────────────────────────────────────┐
-│       VEXON IT SERVICES              │
-│       Flat Rate Pricing              │
-├──────────────────────────────────────┤
-│                                      │
-│  MONTHLY IT RETAINER                 │
-│  Remote + on-site support            │
-│  Starting at $199/month ────────────│
-│                                      │
-│  NETWORK SETUP (up to 5 devices)     │
-│  Router, WiFi, security, docs        │
-│  $250 flat ─────────────────────────│
-│                                      │
-│  WORKGROUP SETUP                     │
-│  File sharing + shared printer       │
-│  $200 flat ─────────────────────────│
-│                                      │
-│  MICROSOFT 365 SETUP                 │
-│  Per user — email + Azure AD join    │
-│  $75/user + $200 base ──────────────│
-│                                      │
-│  BUSINESS EMAIL SETUP                │
-│  Google Workspace or M365            │
-│  $75/user + $150 domain ────────────│
-│                                      │
-│  WIFI & NETWORK JOB                  │
-│  Router setup, troubleshooting       │
-│  Starting at $150 flat ─────────────│
-│                                      │
-│  PC TUNE-UP / VIRUS REMOVAL          │
-│  Remote or on-site                   │
-│  $75–150 flat ──────────────────────│
-│                                      │
-│  All prices are flat rate.           │
-│  No surprise charges. Ever.          │
-│                                      │
-│  📱 Vexon IT: [YOUR PHONE]           │
-│  🌐 vexonit.com                      │
-│  Pharr · Harlingen · Brownsville     │
-└──────────────────────────────────────┘`,
-  },
+    tag: "REFERENCE — Review Scope Before Work",
+    title: "Residential versus business scope",
+    content: "RESIDENTIAL REMOTE PC SUPPORT\n$89 per session: one PC, one main issue, up to 60 minutes.\nBooking requires fit, consent, tool/license check, availability and written total. This covers time and assessment, not a guaranteed repair.\n\nOTHER RESIDENTIAL WORK\nExisting Wi-Fi, printer and device help, scheduled home visits and setup: by quote. No recurring home plan is offered.\n\nBUSINESS WORK\nSeparate from residential pricing. Projects: by quote after fit and scope review. Managed pilot and co-managed help: being prepared, by quote only after readiness/capacity review. No recurring rate, active coverage, included onsite allowance or emergency response is established here.\n\nBEFORE ANY BOOKING\nAgree on tasks, time, exclusions, travel, materials, applicable tax, total, payment and cancellation/refund terms. Extra work needs prior approval. A request does not reserve time, authorize access, enroll a plan or charge a card. Existing signed agreements are not changed by this reference."
+  }
 };
 
 // ── NAVIGATION ───────────────────────────────────────────────────
@@ -1712,68 +815,180 @@ function switchTab(tab) {
 }
 
 // ── DRAWER ───────────────────────────────────────────────────────
+let drawerReturnFocus = null;
+
 function openDrawer(id) {
   const guide = GUIDES[id];
   if (!guide) return;
+  drawerReturnFocus = document.activeElement;
+  // Keep the audience and pricing scope attached when Copy All is used.
+  const notice = `INTERNAL REFERENCE PROTOTYPE
+Residential PC help and business work have separate scopes. This is not a booking or contract.
+Current service scope: ${document.getElementById('public-offers-link').href}
+The residential offer is not a business rate. Business work requires separate fit, scope and a quote.
+Review templates before client use.`;
   document.getElementById('drawer-tag').textContent = guide.tag;
   document.getElementById('drawer-title').textContent = guide.title;
-  document.getElementById('drawer-content').textContent = guide.content;
+  document.getElementById('drawer-content').textContent = notice + '\n\n' + guide.content;
   document.getElementById('copy-btn').textContent = '📋 Copy All';
   document.getElementById('copy-btn').classList.remove('copied');
   document.getElementById('drawer-overlay').classList.add('open');
   document.getElementById('drawer-overlay').querySelector('.drawer-body').scrollTop = 0;
+  document.getElementById('drawer-close').focus();
 }
 
 function closeDrawer() {
   document.getElementById('drawer-overlay').classList.remove('open');
+  if (drawerReturnFocus && drawerReturnFocus.focus) drawerReturnFocus.focus();
+}
+
+function handleDrawerKey(event) {
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    closeDrawer();
+  } else if (event.key === 'Tab') {
+    const ids = ['drawer-close', 'copy-btn', 'drawer-content'];
+    const index = ids.findIndex(id => document.getElementById(id) === document.activeElement);
+    if (event.shiftKey && index <= 0) {
+      event.preventDefault();
+      document.getElementById(ids[ids.length - 1]).focus();
+    } else if (!event.shiftKey && (index === ids.length - 1 || index === -1)) {
+      event.preventDefault();
+      document.getElementById(ids[0]).focus();
+    }
+  }
 }
 
 function copyContent() {
   const content = document.getElementById('drawer-content').textContent;
-  if (navigator.clipboard) {
+  if (navigator.clipboard && window.isSecureContext) {
     navigator.clipboard.writeText(content).then(() => {
       const btn = document.getElementById('copy-btn');
       btn.textContent = '✓ Copied!';
       btn.classList.add('copied');
       setTimeout(() => { btn.textContent = '📋 Copy All'; btn.classList.remove('copied'); }, 2500);
+    }).catch(() => {
+      document.getElementById('copy-btn').textContent = 'Copy failed — select the text';
     });
+  } else {
+    document.getElementById('copy-btn').textContent = 'Copy unavailable — select the text';
   }
 }
 
 // ── INCOME TRACKER ───────────────────────────────────────────────
-let clients = JSON.parse(localStorage.getItem('vexon_clients') || '[]');
+let clientStorageBlocked = false;
+let clientStorageMessage = '';
+let clients = loadClients();
+
+function validPlanningRate(rate) {
+  const cents = Math.round(rate * 100);
+  return typeof rate === 'number' && Number.isFinite(rate) && rate >= 0
+    && Number.isSafeInteger(cents) && cents / 100 === rate;
+}
+
+function planningCents(records) {
+  const cents = records.reduce((sum, record) => sum + Math.round(record.rate * 100), 0);
+  return Number.isSafeInteger(cents) ? cents : null;
+}
+
+function formatPlanningAmount(rate) {
+  return rate.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+function loadClients() {
+  try {
+    const saved = localStorage.getItem('vexon_clients');
+    if (saved === null) return [];
+    const parsed = JSON.parse(saved);
+    const validClient = c => c && !Array.isArray(c)
+      && typeof c.name === 'string' && c.name.trim().length > 0
+      && validPlanningRate(c.rate)
+      && (c.city == null || typeof c.city === 'string');
+    if (!Array.isArray(parsed) || !parsed.every(validClient) || planningCents(parsed) === null) {
+      throw new Error('Invalid saved client records');
+    }
+    return parsed;
+  } catch {
+    clientStorageBlocked = true;
+    clientStorageMessage = 'Saved demo data could not be read. It has not been changed. Keep a copy before choosing to delete it from this browser. Do not use real customer data.';
+    return [];
+  }
+}
+
+function renderStorageNotice() {
+  document.getElementById('tracker-storage-message').textContent = clientStorageMessage;
+  document.getElementById('tracker-storage-notice').hidden = !clientStorageMessage;
+  document.getElementById('tracker-clear-storage').hidden = !clientStorageBlocked;
+}
+
+function clearUnreadableClients() {
+  if (!clientStorageBlocked) return;
+  try {
+    localStorage.removeItem('vexon_clients');
+    clientStorageBlocked = false;
+    clientStorageMessage = '';
+    clients = [];
+  } catch {
+    clientStorageMessage = 'Saved client data could not be cleared. It has not been changed. Check browser storage access and try again.';
+  }
+  renderClients();
+}
+
+function escapeClientText(value) {
+  return value.replace(/[&<>"']/g, character => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  })[character]);
+}
 
 const COLORS = ['#3b82f6','#10b981','#8b5cf6','#f59e0b','#22d3ee','#ef4444','#a78bfa'];
 const MILESTONES = [
-  { amount: 200,  label: 'First client signed 🎉' },
-  { amount: 400,  label: 'Two clients — momentum!' },
-  { amount: 800,  label: '4 clients — side income real' },
-  { amount: 1200, label: '6 clients — $1,200/mo recurring' },
-  { amount: 2000, label: '$2,000/mo — Vexon IT is a business' },
-  { amount: 3000, label: '$3,000/mo — Consider going part-time' },
+  { amount: 200,  label: 'Demo threshold — not a signed client' },
+  { amount: 400,  label: 'Demo threshold — not revenue' },
+  { amount: 800,  label: 'Demo threshold — not receipts' },
+  { amount: 1200, label: 'Demo threshold — not an active plan' },
+  { amount: 2000, label: 'Demo threshold — not business status' },
+  { amount: 3000, label: 'Demo threshold — not career advice' },
 ];
 
-function saveClients() { localStorage.setItem('vexon_clients', JSON.stringify(clients)); }
+function saveClients(nextClients) {
+  if (clientStorageBlocked) return false;
+  if (planningCents(nextClients) === null) {
+    clientStorageMessage = 'The demo total is too large to represent safely. No changes were saved.';
+    renderStorageNotice();
+    return false;
+  }
+  try {
+    localStorage.setItem('vexon_clients', JSON.stringify(nextClients));
+    clients = nextClients;
+    clientStorageMessage = '';
+    return true;
+  } catch {
+    clientStorageMessage = 'Client changes could not be saved. Your existing saved data has not been changed. Check browser storage access and try again.';
+    renderStorageNotice();
+    return false;
+  }
+}
 
 function renderClients() {
-  const total = clients.reduce((s, c) => s + c.rate, 0);
-  document.getElementById('mrr-display').textContent = '$' + total.toLocaleString();
-  document.getElementById('monthly-total').textContent = '$' + total.toLocaleString();
+  renderStorageNotice();
+  const total = planningCents(clients) / 100;
+  document.getElementById('mrr-display').textContent = '$' + formatPlanningAmount(total);
+  document.getElementById('monthly-total').textContent = '$' + formatPlanningAmount(total);
   document.getElementById('client-count').textContent = clients.length;
   document.getElementById('mrr-sub').textContent = clients.length === 0
     ? 'Add your first client below'
-    : clients.length + ' active client' + (clients.length > 1 ? 's' : '') + ' · ' + clients.length * 12 + ' months of recurring revenue';
+    : clients.length + ' fictional record' + (clients.length > 1 ? 's' : '') + ' · entered values, not verified revenue';
 
   const list = document.getElementById('client-list');
   list.innerHTML = clients.map((c, i) => `
     <div class="client-row">
       <div class="cr-dot" style="background:${COLORS[i % COLORS.length]}"></div>
       <div>
-        <div class="cr-name">${c.name}</div>
-        <div style="font-size:0.52rem;color:var(--text2)">${c.city || 'RGV'}</div>
+        <div class="cr-name">${escapeClientText(c.name)}</div>
+        <div style="font-size:0.52rem;color:var(--text2)">${escapeClientText(c.city || 'RGV')}</div>
       </div>
-      <div class="cr-rate">$${c.rate}/mo</div>
-      <span class="cr-status" style="background:#10b98120;color:var(--green);font-size:0.5rem;padding:2px 8px;border-radius:10px">Active</span>
+      <div class="cr-rate">$${formatPlanningAmount(c.rate)}/mo</div>
+      <span class="cr-status" style="background:#10b98120;color:var(--green);font-size:0.5rem;padding:2px 8px;border-radius:10px">Demo</span>
       <button onclick="removeClient(${i})" style="background:none;border:none;color:var(--text2);cursor:pointer;font-size:0.9rem;padding:2px 6px;border-radius:4px" title="Remove">×</button>
     </div>
   `).join('');
@@ -1796,11 +1011,25 @@ function toggleClientForm() {
 
 function addClient() {
   const name = document.getElementById('cf-name').value.trim();
-  const rate = parseInt(document.getElementById('cf-rate').value) || 0;
+  const rateInput = document.getElementById('cf-rate');
+  const rateText = rateInput.value.trim();
+  const rate = Number(rateText);
+  const validRate = /^(?:\d+(?:\.\d{1,2})?|\.\d{1,2})$/.test(rateText)
+    && validPlanningRate(rate);
+  rateInput.setCustomValidity(validRate ? '' : 'Enter a monthly rate of zero or more, with up to two decimal places.');
+  if (!validRate) {
+    rateInput.reportValidity();
+    return;
+  }
   const city = document.getElementById('cf-city').value.trim();
-  if (!name || !rate) return;
-  clients.push({ name, rate, city });
-  saveClients();
+  const nameInput = document.getElementById('cf-name');
+  nameInput.setCustomValidity(name && name.length <= 120 && city.length <= 120
+    ? '' : 'Enter a fictional name and keep name and city to 120 characters each.');
+  if (!name || name.length > 120 || city.length > 120) {
+    nameInput.reportValidity();
+    return;
+  }
+  if (!saveClients([...clients, { name, rate, city }])) return;
   renderClients();
   document.getElementById('cf-name').value = '';
   document.getElementById('cf-rate').value = '';
@@ -1809,8 +1038,8 @@ function addClient() {
 }
 
 function removeClient(i) {
-  clients.splice(i, 1);
-  saveClients();
+  if (!Number.isInteger(i) || i < 0 || i >= clients.length) return;
+  if (!saveClients(clients.filter((client, index) => index !== i))) return;
   renderClients();
 }
 

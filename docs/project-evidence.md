@@ -114,8 +114,9 @@ or proof of customers. localStorage is confined to that browser profile and can
 be cleared; it is not a secure multi-user customer database or a backup. The app
 has no implemented account authentication, cloud synchronization, billing, or
 payment processing. References to third-party setup and billing tools are guide
-content rather than integrations. Templates and prices are illustrative and
-would need review before business use. The prototype should use fictional demo
+content rather than integrations. Historical templates and rates are retained
+in Git history, not current offers. See [current service scope](service-scope.md).
+The prototype should use fictional demo
 records until it receives appropriate input handling, security, and operational
 review.
 
@@ -125,6 +126,13 @@ actual field workflow, improve accessibility and input handling, and define any
 authentication, synchronization, or export requirements before adding them.
 
 ## Evidence notes
+
+**October 19, 2026 source update:** the current app replaces historical setup
+instructions, sales scripts and rate cards with scoped checklists. It incorporates
+the pending tracker input/storage fixes. This does not turn the demo into a
+customer system or make business managed care active. The September review below
+describes its dated evidence, not current runtime acceptance. See
+[release notes](release-2026-10-19.md) for current checks and production gates.
 
 Evidence reviewed on September 11, 2026: the video export and visual-review
 records; dated private application-reliability and completion reports; successful

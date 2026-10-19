@@ -1,14 +1,14 @@
 # Vexon IT · Selected work
 
-Practical software, reliable local systems, and technical explanations by **RJ Garza Jr** in the Rio Grande Valley, Texas.
+Practical software, local-system reliability work and technical explanations from **Vexon IT Services** in the Rio Grande Valley, Texas. Contact: RJ Garza.
 
-[Business portfolio and starter offers](docs/selected-projects.md) · [Business website](https://vexonit.com/) · [Partnership inquiries](PARTNERSHIPS.md) · [Detailed project evidence](docs/project-evidence.md)
+[Current residential and business scope](docs/service-scope.md) · [Business portfolio](docs/selected-projects.md) · [Business website](https://vexonit.com/) · [Partnership inquiries](PARTNERSHIPS.md) · [Detailed project evidence](docs/project-evidence.md)
 
 ## Watch the work
 
-[![Wi-Fi versus internet — an original animated explainer](examples/wifi-vs-internet/thumbnail.png)](https://github.com/reap3risgodawful/vexon-it/raw/refs/heads/main/examples/wifi-vs-internet/landscape.mp4)
+[![Wi-Fi versus internet — an original animated explainer](examples/wifi-vs-internet/thumbnail.png)](https://github.com/VexonGIT/vexon-it/raw/refs/heads/main/examples/wifi-vs-internet/landscape.mp4)
 
-**[Watch the published Facebook reel](https://www.facebook.com/reel/1467846138733469)** · [Download the 46-second landscape edition](https://github.com/reap3risgodawful/vexon-it/raw/refs/heads/main/examples/wifi-vs-internet/landscape.mp4) · [Source and reproduction notes](examples/wifi-vs-internet/README.md)
+**[Watch the published Facebook reel](https://www.facebook.com/reel/1467846138733469)** · [Download the 46-second landscape edition](https://github.com/VexonGIT/vexon-it/raw/refs/heads/main/examples/wifi-vs-internet/landscape.mp4) · [Source and reproduction notes](examples/wifi-vs-internet/README.md)
 
 An original, caption-led explanation of why full Wi-Fi bars do not prove internet access. Created in Python with Manim, with separately composed landscape and portrait editions. Both exports passed complete frame decoding: **2,520 frames total**, H.264 video, 30 fps, and silent AAC audio. The diagram is illustrative; this is a sample of technical communication.
 
@@ -40,7 +40,13 @@ See [partnership options and contact details](PARTNERSHIPS.md).
 
 ## Working with this repository
 
-The original `index.html` field app is preserved. It is a prototype: use fictional records. Its browser storage and input handling have not been reviewed for real customer data, and it does not process payments or verify income.
+The `index.html` field app is an **internal demo**. It contains scoped reference checklists and a fictional planning tracker, not a working helpdesk, customer database, contract, invoice or payment service. Historical scripts and rate cards remain in Git history, not current guidance.
+
+**Current offer wording:** [residential and business scope](docs/service-scope.md) separates **$89 residential remote PC support: one PC, one main issue, up to 60 minutes** from **business work by separate quote**. Home visits and other home-device help are by quote. Managed business care is being prepared; no recurring business rate or active coverage is established. The residential price is not a business rate, even for a business device used at home.
+
+**Production is separate:** merging this repository does not publish the Astro website at vexonit.com. Website content, contact delivery, contracting identity/terms, licensed tools and operational readiness still need their own verified release checks. Existing customer agreements and rights are not changed by this documentation.
+
+Use fictional records only. Browser-local storage is not secure customer storage or a backup. Input/storage regression tests do not establish production security, billing accuracy or real revenue. Run `node --test tests/*.test.cjs` for the repository checks; see [tests](tests/README.md) and [release notes](docs/release-2026-10-19.md) for scope and remaining gates.
 
 The private operations case study shares outcomes and validation methods without publishing deployment configuration or private records. Dated tests describe their tested scope; they are not an uptime guarantee or a claim of customer deployments.
 

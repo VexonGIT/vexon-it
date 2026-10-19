@@ -240,14 +240,15 @@ A successful retry is useful evidence; it does not prove the underlying cause.
 
 ## Optional Vexon help
 
-If you want a separately scoped session, [email rj@vexonit.com](mailto:rj@vexonit.com). Describe the device and issue without passwords or private account details. No message is sent by using this guide.
+For help, [email support@vexonit.com](mailto:support@vexonit.com). Describe your city, device, main issue and whether it is personal home use or business work. Keep passwords and private account details out. No message is sent by using this guide.
 
-- **$25 remote:** up to 20 minutes. One issue on one device, with the customer present to try agreed steps. A working phone or internet connection is needed.
-- **$65 local tech visit:** up to 45 minutes. One priority tech issue; travel within 10 road miles of downtown Edinburg included.
+- **Residential remote PC support:** **$89**, one PC, one main issue, up to **60 minutes**. Fit, ownership/authority, consent, commercial tool/license check, availability and written total must be confirmed before booking. The customer stays present.
+- **Other residential help:** Wi-Fi, printer/device help and home visits are **by quote**. They are not a fixed-price extension of the PC session.
+- **Business work:** separately scoped and quoted, even for business equipment or accounts used at home. Managed and co-managed care are being prepared; no recurring rate or active coverage is established here.
 
-Scope, final price including applicable tax, and availability are confirmed before booking. The fee covers listed time and assessment, with no guaranteed repair. Farther travel, materials, extra time/devices, new cabling, router changes, provider transitions/migrations and broader work need separate scope and approval.
+See the [current residential and business scope](../../docs/service-scope.md). The residential fee covers agreed time and assessment, not a guaranteed repair. Confirm exclusions, payment and cancellation/refund terms, tax, travel, materials and total before booking. Extra work requires prior approval. A request alone does not reserve time, authorize access or charge a card. A free 20-minute planning call is a needs discussion, not troubleshooting or a technical assessment. Existing agreements are not changed by this guide.
 
-This free guide does not include a booked service, a response-time promise, or a paid worksheet. For download problems only: [support@vexonit.com](mailto:support@vexonit.com).
+This free guide does not include a booked service, a response-time promise or a paid worksheet. Contact delivery and service readiness have not been acceptance-tested here.
 
 ## About this guide
 
