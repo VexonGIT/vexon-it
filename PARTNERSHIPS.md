@@ -1,12 +1,13 @@
 # Work with Vexon IT
 
-**RJ Garza Jr · Rio Grande Valley, Texas**
+**Vexon IT Services · Rio Grande Valley, Texas**
 
-I provide scoped technology help and build practical tools for Vexon's own work. The portfolio includes an original animated networking explainer, a field-reference app prototype, and dated reliability and recovery work in a private service environment.
+Vexon provides scoped technology help and builds practical tools for its own work. The portfolio includes an original animated networking explainer, a field-reference app prototype, and dated reliability and recovery work in a private service environment. Contact: RJ Garza.
 
 ## A focused first conversation
 
-- **Device and connectivity help:** start with one device or priority issue and agree on a bounded service visit or remote session.
+- **Residential help:** the [residential scope](docs/service-scope.md) defines the personal-PC offer; other home-device work and visits are by quote.
+- **Business work:** a separate fit review and quote. Managed and co-managed care are being prepared; no recurring rate or active coverage is established here.
 - **Service partnerships:** discuss a specific local technology need, the work each party would handle, and the evidence needed for a clear handoff.
 - **Relevant technology providers:** discuss products that could support Vexon's work. Product-specific claims require actual testing and an agreed relationship.
 
@@ -14,10 +15,10 @@ Vexon's media and learning work supports its own promotion, research and develop
 
 ## Start a conversation
 
-Send your company, city, technology need, proposed role and preferred timing. For a small first job, see the [business portfolio and starter offers](docs/selected-projects.md).
+Send your company, city, technology need, proposed role and preferred timing. See the [portfolio](docs/selected-projects.md) and [current residential/business scope](docs/service-scope.md). A planning discussion is not permission to access systems or a booking.
 
 **[Email RJ](mailto:rj@vexonit.com?subject=Vexon%20IT%20partnership%20inquiry)** · [Support inquiries](mailto:support@vexonit.com) · **956-513-0218** · [Vexon IT business contact](https://vexonit.com/contact/)
 
-[Watch the original networking sample](https://github.com/reap3risgodawful/vexon-it/raw/refs/heads/main/examples/wifi-vs-internet/landscape.mp4) · [Read project evidence](docs/project-evidence.md)
+[Watch the original networking sample](https://github.com/VexonGIT/vexon-it/raw/refs/heads/main/examples/wifi-vs-internet/landscape.mp4) · [Read project evidence](docs/project-evidence.md)
 
 The sample is independently produced. No manufacturer sponsorship or endorsement is claimed.
